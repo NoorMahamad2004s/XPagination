@@ -16,6 +16,8 @@ function Pagination() {
         console.log(response.data); 
       } catch (error) {
         setError('Failed to fetch data');
+        alert('Failed to fetch data');
+        
       }
       setLoading(false);
     };
