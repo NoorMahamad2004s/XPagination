@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import './Pagination.css'
 
 function Pagination() {
   const [data, setData] = useState([]);
@@ -51,22 +52,24 @@ function Pagination() {
   if (error) return <div>{error}</div>;
 
   return (
-    <div>
+    <div className='container'>
         <h1 className="heading">Employee Data Table</h1>
-      <table>
-        <thead>
-          <tr className='table-heading'>
+        <table>
+            
+        <thead className='table-heading'>
+          <tr>
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Role</th>
           </tr>
         </thead>
+        
         <tbody className='table-data'>{renderTableData()}</tbody>
       </table>
       <div className='pagination'>
         <button onClick={() => onPageChange(page - 1)} disabled={page === 1}>Previous</button>
-        <span>{page}</span>
+        <span className='pageNum'>{page}</span>
         <button onClick={() => onPageChange(page + 1)} disabled={page === Math.ceil(data.length / 10)}>Next</button>
       </div>
     </div>

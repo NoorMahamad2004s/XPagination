@@ -1,0 +1,32 @@
+
+
+
+.table-heading{
+    background-color: #318945;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.table-data{
+    text-align: center;
+}
+
+.pagination button{
+    background-color: #318945;
+    color: white;
+    /* text-align: center; */
+    margin-top: 30px;
+    padding: 7px;
+    border-radius: 10px;
+    
+}
+
+.pageNum{
+    background-color: #318945;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
